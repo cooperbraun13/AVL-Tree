@@ -6,7 +6,7 @@ class AVLNode {
         int value;
         AVLNode* left;
         AVLNode* right;
-        AVLNode* parentl;
+        AVLNode* parent;
         int height;
         AVLNode(int val);
         ~AVLNode();

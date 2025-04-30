@@ -1,53 +1,65 @@
 # AVL Tree Implementation
 
-## Overview
+This is an implementation of an AVL Tree, which is a self-balancing binary search tree. After any insertion or deletion operation, the tree automatically maintains balance by ensuring that the height difference between left and right subtrees (balance factor) is at most 1 for all nodes.
 
-This project implements an AVL Tree (self-balancing binary search tree) with complete functionality for insertion, deletion, search, and tree traversal operations.
+## Files Included
 
-## File Structure
+- `avl_node.hpp` and `avl_node.cpp`: AVL tree node class
+- `avl_tree.hpp` and `avl_tree.cpp`: AVL tree implementation
+- `main.cpp`: Inserts the first 25 Fibonacci numbers and prints the tree
+- `test_avl_tree.cpp`: Test cases for the AVL tree implementation
+- `Makefile`: For building and running the project
+- `Specifications.pdf`: Detailed specifications for the features
+- `UML_Diagram.pdf`: UML diagram of the classes
 
-* `avltree.hpp` - Header file containing AVLNode and AVLTree class declarations
-* `avltree.cpp` - Implementation of the AVL tree operations
-* `main.cpp` - Demo program that inserts the first 25 Fibonacci numbers and prints the tree
-* `test_avl_tree.cpp` - Unit tests for the AVL tree implementation
+## How to Build and Run
 
-## Compilation Instructions
+### Main Program
 
-### Compile Main Program
+To build and run the main program:
 
-```bash
-g++ -std=c++11 main.cpp avltree.cpp -o main
+```
+make
 ```
 
-### Compile Test Program
+This command will:
+1. Compile the code using g++
+2. Run the executable
+3. Clean up the binary file after execution
 
-```bash
-g++ -std=c++11 test_avl_tree.cpp avl_tree.cpp -o test
+### Tests
+
+To build and run the tests:
+
+```
+make test
 ```
 
-## Running The Programs
+This command will:
+1. Compile the test code using g++
+2. Run the test executable
+3. Clean up the test binary file after execution
 
-### Run The Main Program
+## Features
 
-```bash
-./main
-```
+The AVL tree implementation includes:
 
-This will:
+- Standard BST operations (insertion, deletion, search)
+- Self-balancing after each insertion and deletion
+- Four rotation types (left, right, left-right, right-left)
+- Parent pointers for efficient traversal
+- Multiple tree traversal methods (in-order, pre-order, post-order)
 
-1. Insert the first 25 Fibonacci numbers into the AVL tree
-2. Display the tree structure with height information
-3. Show the inorder traversal to verify the BST property
+## Main Program
 
-### Run The Test Program
+The main program in `main.cpp` generates the first 25 Fibonacci numbers and inserts them into an AVL tree. It then prints the tree using different traversal methods.
 
-```bash
-./test
-```
+## Test Program
 
-This will run four test suites:
+The test program in `test_avl_tree.cpp` includes tests for:
+- Basic operations (insert, remove, contains)
+- Tree properties (is_empty, size)
+- Tree balancing for all four rotation cases
+- Complex tree balancing with multiple rotations
 
-1. Insertion tests - verifies correct insertion and balancing
-2. Deletion tests - verifies proper deletion and rebalancing
-3. Rotation tests - tests all four rotation types
-4. Search tests - verifies search functionality
+Each test prints "Passed" or "Failed" based on assertions.
