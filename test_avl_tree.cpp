@@ -289,7 +289,7 @@ int main() {
     
     // Run all tests
     for (int i = 0; i < total; i++) {
-        std::cout << "Running " << tests[i].name << "... ";
+        std::cout << "Running " << tests[i].name << " ~ ";
         if (tests[i].function()) {
             std::cout << "PASSED" << std::endl;
             passed++;
