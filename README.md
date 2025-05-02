@@ -9,8 +9,6 @@ This is an implementation of an AVL Tree, which is a self-balancing binary searc
 - `main.cpp`: Inserts the first 25 Fibonacci numbers and prints the tree
 - `test_avl_tree.cpp`: Test cases for the AVL tree implementation
 - `Makefile`: For building and running the project
-- `Specifications.pdf`: Detailed specifications for the features
-- `UML_Diagram.pdf`: UML diagram of the classes
 
 ## How to Build and Run
 
@@ -22,44 +20,50 @@ To build and run the main program:
 make
 ```
 
-This command will:
-1. Compile the code using g++
-2. Run the executable
-3. Clean up the binary file after execution
+You can also execute these steps individually:
+
+```
+make compile
+make run
+make clean
+```
 
 ### Tests
 
-To build and run the tests:
+To build and run the test suite:
 
 ```
 make test
 ```
 
-This command will:
-1. Compile the test code using g++
-2. Run the test executable
-3. Clean up the test binary file after execution
+You can also execute these steps individually:
+
+```
+make test_compile
+make test_run
+make test_clean
+```
 
 ## Features
 
 The AVL tree implementation includes:
 
-- Standard BST operations (insertion, deletion, search)
-- Self-balancing after each insertion and deletion
-- Four rotation types (left, right, left-right, right-left)
-- Parent pointers for efficient traversal
-- Multiple tree traversal methods (in-order, pre-order, post-order)
+The AVL tree implementation includes:
+
+* Standard BST operations (insertion, deletion, search)
+* Self-balancing after each insertion and deletion
+* Four rotation types to maintain balance:
+    * Left rotation
+    * Right rotation
+    * Left-Right rotation (double rotation)
+    * Right-Left rotation (double rotation)
+* Parent pointers for efficient traversal
+* Multiple tree traversal methods:
+    * In-order traversal (sorted order)
+    * Pre-order traversal
+    * Post-order traversal
+* Height and balance factor calculations
 
 ## Main Program
 
 The main program in `main.cpp` generates the first 25 Fibonacci numbers and inserts them into an AVL tree. It then prints the tree using different traversal methods.
-
-## Test Program
-
-The test program in `test_avl_tree.cpp` includes tests for:
-- Basic operations (insert, remove, contains)
-- Tree properties (is_empty, size)
-- Tree balancing for all four rotation cases
-- Complex tree balancing with multiple rotations
-
-Each test prints "Passed" or "Failed" based on assertions.
